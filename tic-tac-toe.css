@@ -6,6 +6,37 @@
   --clr-btn-prime: #2f8edb;
   --clr-btn: #e9e9ed;
   --clr-btn-hvr: #d6d6d8;
+  --clr-txt: #000;
+}
+.darkmode{
+  --clr-bg: #0d284a;
+  --clr-surface: #2e2e2e;
+
+  --clr-btn-prime: #57b0fb;
+  --clr-btn: #3e3e3e;
+  --clr-btn-hvr: #3e3e3e;
+  --clr-txt: #FFF;
+}
+#theme-switch {
+  height: 40px; width: 40px;
+  padding: 0;
+  border: none; border-radius: 50%;
+  background-color: var(--clr-btn);
+  display: flex; justify-content: center; align-items: center;
+  position: absolute; right: 10px; top: 10px;
+  cursor: pointer;
+}
+#theme-switch svg {
+  fill: var(--clr-txt);
+}
+#theme-switch svg:last-child {
+  display: none;
+}
+.darkmode #theme-switch svg:first-child {
+  display: none;
+}
+.darkmode #theme-switch svg:last-child {
+  display: block;
 }
 
 *{
@@ -35,16 +66,18 @@ body{
   background: var(--clr-surface);
   padding: 20px 25px 20px;
   border-radius: 7px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
   text-align: center;
 }
 .config-box h2{
   border-bottom: 0.5px solid gray;
   padding-bottom: 10px;
+  color: var(--clr-txt);
 }
 .config-box .config-option{
   width: 100%;
   margin-top: 10px; padding-top: 10px;
+  color: var(--clr-txt);
 }
 .config-option .option{
   margin-top: 10px;
@@ -55,7 +88,7 @@ body{
   width: 100%;
   padding: 8px 0;
   background: none; border: 2px solid var(--clr-btn);
-  font-size: 1.2rem; font-weight: 550;
+  font-size: 1.2rem; font-weight: 550; color: var(--clr-txt);
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -152,7 +185,7 @@ body{
 }
 .result-box .won-text{
   margin-top: 20px;
-  font-size: 1.6rem;
+  font-size: 1.6rem; color: var(--clr-txt);
 }
 .result-box .replay-btn{
   margin-top: 20px; padding: 8px 0; width: 50%;
